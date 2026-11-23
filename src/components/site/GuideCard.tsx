@@ -20,7 +20,9 @@ export function GuideCard({ guide }: { guide: Guide }) {
         />
         {guide.coverStyle === "art" && (
           <>
-            <span className="label-caps absolute left-3 top-3 bg-ink px-2 py-1 text-paper">{guide.tag}</span>
+            <span className="label-caps absolute left-3 top-3 bg-ink px-2 py-1 text-paper">
+              {guide.tag}
+            </span>
             <span className="label-caps absolute bottom-3 left-3 bg-primary px-2 py-1 text-primary-foreground">
               Interactive app
             </span>

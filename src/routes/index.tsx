@@ -24,7 +24,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "The Maison Mini | Dress the part. Spend less." },
       {
         property: "og:description",
-        content: "Not a PDF: interactive mini apps where you tap pieces and unlock outfits. From $7.",
+        content:
+          "Not a PDF: interactive mini apps where you tap pieces and unlock outfits. From $7.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -41,12 +42,27 @@ const strip = [
 ] as const;
 
 const faqs = [
-  ["Is this a PDF or a set of pictures?", "Neither. Each product is an interactive mini app: you tap pieces, track your budget, and outfits unlock as you go."],
-  ["Do I need to download anything?", "No. The mini app opens in your web browser on a phone, tablet or computer. Nothing to install from an app store."],
-  ["Is my progress saved?", "Yes, in the browser you use. Open it on the same device and browser to see your progress again."],
-  ["Are the prices real store prices?", "Prices are target prices for secondhand, sale or clearance shopping. They vary by store, region and season."],
+  [
+    "Is this a PDF or a set of pictures?",
+    "Neither. Each product is an interactive mini app: you tap pieces, track your budget, and outfits unlock as you go.",
+  ],
+  [
+    "Do I need to download anything?",
+    "No. The mini app opens in your web browser on a phone, tablet or computer. Nothing to install from an app store.",
+  ],
+  [
+    "Is my progress saved?",
+    "Yes, in the browser you use. Open it on the same device and browser to see your progress again.",
+  ],
+  [
+    "Are the prices real store prices?",
+    "Prices are target prices for secondhand, sale or clearance shopping. They vary by store, region and season.",
+  ],
   ["Are the illustrations real photos?", "No. The illustrations are AI-created."],
-  ["How do I get my app after buying?", "You get instant access right after checkout, plus a link by email."],
+  [
+    "How do I get my app after buying?",
+    "You get instant access right after checkout, plus a link by email.",
+  ],
 ] as const;
 
 function Index() {
@@ -97,7 +113,11 @@ function Index() {
                   href={`/guides/${g.slug}`}
                   className={`absolute block border-2 border-ink bg-card shadow-offset transition-transform hover:z-20 hover:scale-105 ${cls}`}
                 >
-                  <img src={g.cover} alt={`${g.title} cover`} className="aspect-[4/5] w-full object-cover" />
+                  <img
+                    src={g.cover}
+                    alt={`${g.title} cover`}
+                    className="aspect-[4/5] w-full object-cover"
+                  />
                 </a>
               ) : null,
             )}
@@ -143,8 +163,8 @@ function Index() {
           </p>
         </div>
         <p className="mx-auto mt-10 max-w-xl text-center text-muted-foreground">
-          Not a PDF. Not a folder of pictures. Interactive mini apps you tap through on your phone: mark the
-          pieces you own, watch your budget, and see your outfits unlock.
+          Not a PDF. Not a folder of pictures. Interactive mini apps you tap through on your phone:
+          mark the pieces you own, watch your budget, and see your outfits unlock.
         </p>
       </section>
 
@@ -153,7 +173,11 @@ function Index() {
         <div className="mx-auto grid max-w-4xl grid-cols-3 gap-2 md:gap-4">
           {featured.map(({ img, guide }) =>
             guide ? (
-              <a key={guide.slug} href={`/guides/${guide.slug}`} className="group relative block overflow-hidden border-2 border-ink bg-card">
+              <a
+                key={guide.slug}
+                href={`/guides/${guide.slug}`}
+                className="group relative block overflow-hidden border-2 border-ink bg-card"
+              >
                 <img
                   src={img}
                   alt={`Illustration from ${guide.title}`}
@@ -173,7 +197,9 @@ function Index() {
         <h2 className="font-display mx-auto mt-10 max-w-2xl text-center text-3xl uppercase leading-tight text-primary md:text-5xl">
           For women who prefer intention over impulse buys.
         </h2>
-        <p className="label-caps mt-3 text-center text-primary">Five mini apps · Three bundles · Instant access</p>
+        <p className="label-caps mt-3 text-center text-primary">
+          Five mini apps · Three bundles · Instant access
+        </p>
       </section>
 
       {/* Try it */}
@@ -229,11 +255,25 @@ function Index() {
           How it works
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
-          {([
-            ["01", "Buy once", "Checkout in a minute. Your mini app opens instantly, plus a link by email."],
-            ["02", "Open on your phone", "It runs in your browser on phone, tablet or laptop. Nothing to download."],
-            ["03", "Tap & unlock", "Tap the pieces you own, track your budget and watch your outfits unlock."],
-          ] as const).map(([n, t, d]) => (
+          {(
+            [
+              [
+                "01",
+                "Buy once",
+                "Checkout in a minute. Your mini app opens instantly, plus a link by email.",
+              ],
+              [
+                "02",
+                "Open on your phone",
+                "It runs in your browser on phone, tablet or laptop. Nothing to download.",
+              ],
+              [
+                "03",
+                "Tap & unlock",
+                "Tap the pieces you own, track your budget and watch your outfits unlock.",
+              ],
+            ] as const
+          ).map(([n, t, d]) => (
             <div key={n} className="border-2 border-ink bg-card p-6">
               <span className="font-display text-6xl text-primary">{n}</span>
               <h3 className="font-display mt-2 text-2xl uppercase">{t}</h3>

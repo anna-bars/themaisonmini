@@ -46,7 +46,11 @@ export const guides: Guide[] = [
     price: 12,
     blurb:
       "Dress the part. Spend $100. A mini app you tap through: mark the pieces you own, plan what to buy, and watch 18 looks come into focus.",
-    highlights: ["Tap 15 pieces: own it or will buy", "Live $100 budget meter", "18 looks that unlock as you go"],
+    highlights: [
+      "Tap 15 pieces: own it or will buy",
+      "Live $100 budget meter",
+      "18 looks that unlock as you go",
+    ],
     inside: [
       "Tap a piece once to own it, twice to add it to your buy list",
       "A live budget meter shows what you have left of $100",
@@ -65,7 +69,11 @@ export const guides: Guide[] = [
     price: 12,
     blurb:
       "A winter wardrobe planner you tap through: track 30 essentials, build your buy list and unlock 22 cold-weather looks.",
-    highlights: ["Tap 30 pieces: owned or to buy", "Live tracker + shopping budget", "22 looks that unlock"],
+    highlights: [
+      "Tap 30 pieces: owned or to buy",
+      "Live tracker + shopping budget",
+      "22 looks that unlock",
+    ],
     inside: [
       "Tap any piece to cycle: don’t have, owned, to buy",
       "Live counters for pieces owned and looks unlocked",
@@ -84,7 +92,11 @@ export const guides: Guide[] = [
     price: 9,
     blurb:
       "Party mode, on a budget. Tap through 15 core pieces and 6 festive add-ons and watch 20 holiday looks unlock.",
-    highlights: ["Tap 21 pieces: own it or will buy", "Live party budget meter", "20 looks that unlock"],
+    highlights: [
+      "Tap 21 pieces: own it or will buy",
+      "Live party budget meter",
+      "20 looks that unlock",
+    ],
     inside: [
       "Tap once to own a piece, twice to add it to your buy list",
       "A live budget meter for your party shopping",
@@ -103,7 +115,11 @@ export const guides: Guide[] = [
     price: 7,
     blurb:
       "A 4-step mini app that resets your closet: sort, audit, find your gaps and tick off checklists, so you only buy what’s missing.",
-    highlights: ["Add items and sort them into piles", "Tap to find your gaps", "Tick-off checklists with progress"],
+    highlights: [
+      "Add items and sort them into piles",
+      "Tap to find your gaps",
+      "Tick-off checklists with progress",
+    ],
     inside: [
       "Add each item and drop it in Love it, Maybe or Let go",
       "Quick audit you fill in before you shop",
@@ -147,7 +163,11 @@ export const bundles: Bundle[] = [
     slug: "winter-edit",
     title: "The Winter Edit",
     badge: "Save $4",
-    guideSlugs: ["winter-capsule-playbook", "holiday-party-outfit-formulas", "closet-reset-planner"],
+    guideSlugs: [
+      "winter-capsule-playbook",
+      "holiday-party-outfit-formulas",
+      "closet-reset-planner",
+    ],
     price: 24,
     cover: winterEditCover,
   },

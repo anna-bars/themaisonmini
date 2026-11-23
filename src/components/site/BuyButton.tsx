@@ -42,7 +42,11 @@ export function BuyButton({
   const planId = getPlanId(slug);
   return (
     <>
-      <Button variant={variant} size={size} className={className} onClick={() => {
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => {
           if (planId) setOpen(true);
           else if (checkoutUrl) window.location.assign(checkoutUrl);
           else setOpen(true);
@@ -54,7 +58,9 @@ export function BuyButton({
         {planId ? (
           <DialogContent className="max-h-[90vh] overflow-y-auto border-2 border-ink bg-paper shadow-offset sm:rounded-none">
             <DialogHeader>
-              <DialogTitle className="font-display text-3xl uppercase leading-none">{itemName}</DialogTitle>
+              <DialogTitle className="font-display text-3xl uppercase leading-none">
+                {itemName}
+              </DialogTitle>
               <DialogDescription>Secure checkout · instant access after payment.</DialogDescription>
             </DialogHeader>
             <Suspense fallback={<p className="py-8 text-center">Loading checkout…</p>}>
@@ -69,8 +75,8 @@ export function BuyButton({
                 Checkout opens soon
               </DialogTitle>
               <DialogDescription className="pt-2 text-base text-muted-foreground">
-                {itemName} ({formatPrice(price)}) will be available to buy here very soon, with instant
-                access right after payment.
+                {itemName} ({formatPrice(price)}) will be available to buy here very soon, with
+                instant access right after payment.
               </DialogDescription>
             </DialogHeader>
             <Button variant="red" size="pill" onClick={() => setOpen(false)}>

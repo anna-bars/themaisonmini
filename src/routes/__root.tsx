@@ -82,10 +82,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "The Maison Mini | Capsule Wardrobe Guides" },
-      { name: "description", content: "Interactive capsule wardrobe mini apps that open in your browser." },
+      {
+        name: "description",
+        content: "Interactive capsule wardrobe mini apps that open in your browser.",
+      },
       { name: "author", content: "The Maison Mini" },
       { property: "og:title", content: "The Maison Mini | Capsule Wardrobe Guides" },
-      { property: "og:description", content: "Interactive capsule wardrobe mini apps that open in your browser." },
+      {
+        property: "og:description",
+        content: "Interactive capsule wardrobe mini apps that open in your browser.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

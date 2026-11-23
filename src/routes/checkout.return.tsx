@@ -11,14 +11,17 @@ export const Route = createFileRoute("/checkout/return")({
     payment: typeof s.payment === "string" ? s.payment : undefined,
     item: typeof s.item === "string" ? s.item : undefined,
   }),
-  head: () => ({ meta: [{ title: "Your order | The Maison Mini" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({
+    meta: [{ title: "Your order | The Maison Mini" }, { name: "robots", content: "noindex" }],
+  }),
   component: CheckoutReturn,
 });
 
 function CheckoutReturn() {
   const { status, item } = Route.useSearch();
   // Whop gives the buyer access to the guide itself; this link just opens it.
-  const accessUrl = (item && (getAccessUrl(item) ?? getCheckoutUrl(item))) || "https://whop.com/hub";
+  const accessUrl =
+    (item && (getAccessUrl(item) ?? getCheckoutUrl(item))) || "https://whop.com/hub";
 
   // After an off-site payment step (e.g. bank confirmation), also go straight to the guide.
   useEffect(() => {
@@ -33,9 +36,13 @@ function CheckoutReturn() {
 
   if (status === "succeeded") {
     title = "Thank you!";
-    body = "Your payment is complete. A receipt is on its way to your email, and taking you to your guide now.";
+    body =
+      "Your payment is complete. A receipt is on its way to your email, and taking you to your guide now.";
     action = (
-      <a href={accessUrl} className="label-caps inline-block border-2 border-ink bg-primary px-6 py-3 text-paper">
+      <a
+        href={accessUrl}
+        className="label-caps inline-block border-2 border-ink bg-primary px-6 py-3 text-paper"
+      >
         Open your guide
       </a>
     );

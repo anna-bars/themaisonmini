@@ -33,7 +33,9 @@ export const Route = createFileRoute("/guides/$slug")({
     <SiteShell>
       <div className="px-8 py-32 text-center">
         <h1 className="font-display text-6xl uppercase text-primary">Guide not found</h1>
-        <Link to="/" className="label-caps mt-6 inline-block underline">Back to the shop</Link>
+        <Link to="/" className="label-caps mt-6 inline-block underline">
+          Back to the shop
+        </Link>
       </div>
     </SiteShell>
   ),
@@ -50,7 +52,9 @@ function GuidePage() {
   return (
     <SiteShell>
       <div className="border-y-2 border-ink px-5 py-3 md:px-8">
-        <Link to="/" hash="guides" className="label-caps hover:text-primary">← All guides</Link>
+        <Link to="/" hash="guides" className="label-caps hover:text-primary">
+          ← All guides
+        </Link>
       </div>
 
       <section className="grid gap-10 px-5 py-10 md:grid-cols-2 md:px-8 md:py-14">
@@ -62,7 +66,9 @@ function GuidePage() {
               className={`aspect-[4/5] w-full ${guide.coverStyle === "poster" ? "object-contain" : "object-contain p-6"}`}
             />
             {guide.coverStyle === "art" && (
-              <span className="label-caps absolute left-3 top-3 bg-ink px-2 py-1 text-paper">{guide.tag}</span>
+              <span className="label-caps absolute left-3 top-3 bg-ink px-2 py-1 text-paper">
+                {guide.tag}
+              </span>
             )}
           </div>
           <p className="mt-4 text-center text-xs text-muted-foreground">
@@ -72,11 +78,15 @@ function GuidePage() {
 
         <div className="flex flex-col gap-5">
           <p className="label-caps text-primary">The Maison Mini · Interactive mini app</p>
-          <h1 className="font-display text-5xl uppercase leading-[0.95] text-primary md:text-7xl">{guide.title}</h1>
+          <h1 className="font-display text-5xl uppercase leading-[0.95] text-primary md:text-7xl">
+            {guide.title}
+          </h1>
           <p className="text-lg text-muted-foreground">{guide.blurb}</p>
           <div className="flex items-center gap-4 border-y-2 border-ink py-4">
             <span className="font-display text-6xl text-primary">{formatPrice(guide.price)}</span>
-            <span className="text-sm text-muted-foreground">One-time purchase · Instant access</span>
+            <span className="text-sm text-muted-foreground">
+              One-time purchase · Instant access
+            </span>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <BuyButton slug={guide.slug} itemName={guide.title} price={guide.price} size="pillLg" />
@@ -96,7 +106,10 @@ function GuidePage() {
             ) : null}
           </div>
           {relatedBundles.length > 0 && (
-            <a href="#bundles" className="label-caps -mt-2 self-start underline underline-offset-4 hover:text-primary">
+            <a
+              href="#bundles"
+              className="label-caps -mt-2 self-start underline underline-offset-4 hover:text-primary"
+            >
               Want more? Save with a bundle ↓
             </a>
           )}
@@ -106,15 +119,17 @@ function GuidePage() {
             <ul className="mt-3 divide-y-2 divide-ink border-y-2 border-ink">
               {guide.inside.map((item, i) => (
                 <li key={item} className="flex items-center gap-4 py-3">
-                  <span className="font-display text-2xl text-primary">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-display text-2xl text-primary">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <p className="text-xs text-muted-foreground">
-            Not a PDF or a set of pictures: an interactive app that opens in any browser on phone, tablet or
-            computer. Progress saves in the browser you use. Illustrations are AI-created.
+            Not a PDF or a set of pictures: an interactive app that opens in any browser on phone,
+            tablet or computer. Progress saves in the browser you use. Illustrations are AI-created.
           </p>
         </div>
       </section>

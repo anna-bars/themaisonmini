@@ -39,14 +39,24 @@ function Header() {
   return (
     <header className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 py-4 md:px-8">
       <nav className="flex gap-5">
-        <a href="/#guides" className={navClass}>Shop</a>
-        <a href="/#bundles" className={`${navClass} hidden sm:inline`}>Bundles</a>
-        <a href="/#try" className={`${navClass} hidden md:inline`}>Try the app</a>
+        <a href="/#guides" className={navClass}>
+          Shop
+        </a>
+        <a href="/#bundles" className={`${navClass} hidden sm:inline`}>
+          Bundles
+        </a>
+        <a href="/#try" className={`${navClass} hidden md:inline`}>
+          Try the app
+        </a>
       </nav>
       <Logo className="h-8 sm:h-10 md:h-12" />
       <nav className="flex justify-end gap-5">
-        <a href="/#faq" className={navClass}>FAQ</a>
-        <a href="/#bundles" className={`${navClass} hidden whitespace-nowrap sm:inline`}>Shop all</a>
+        <a href="/#faq" className={navClass}>
+          FAQ
+        </a>
+        <a href="/#bundles" className={`${navClass} hidden whitespace-nowrap sm:inline`}>
+          Shop all
+        </a>
       </nav>
     </header>
   );
@@ -61,10 +71,18 @@ function Footer() {
           For women who dress with intention, not a big budget.
         </p>
         <nav className="flex flex-wrap justify-center gap-6">
-          <a href="/#guides" className="label-caps hover:text-primary">The guides</a>
-          <a href="/#bundles" className="label-caps hover:text-primary">Bundles</a>
-          <a href="/#how" className="label-caps hover:text-primary">How it works</a>
-          <a href="/#faq" className="label-caps hover:text-primary">FAQ</a>
+          <a href="/#guides" className="label-caps hover:text-primary">
+            The guides
+          </a>
+          <a href="/#bundles" className="label-caps hover:text-primary">
+            Bundles
+          </a>
+          <a href="/#how" className="label-caps hover:text-primary">
+            How it works
+          </a>
+          <a href="/#faq" className="label-caps hover:text-primary">
+            FAQ
+          </a>
         </nav>
         <p className="max-w-xl text-xs text-muted-foreground">
           © The Maison Mini. For personal use only. Please do not copy, resell or share the files.
