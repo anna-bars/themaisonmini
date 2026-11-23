@@ -50,6 +50,7 @@
     "@tanstack/react-router": "1.170.41",
     "@tanstack/react-start": "1.168.60",
     "@tanstack/router-plugin": "1.168.42",
+    "@vercel/analytics": "^2.0.1",
     "@whop/elements": "latest",
     "@whop/elements-react": "latest",
     "class-variance-authority": "^0.7.1",
