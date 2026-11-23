@@ -126,12 +126,35 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    (function (
+      c: any,
+      l: any,
+      a: string,
+      r: string,
+      i: string,
+      t?: any,
+      y?: any
+    ) {
+      c[a] =
+        c[a] ||
+        function (...args: any[]) {
+          (c[a].q = c[a].q || []).push(args);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "zi63bxvwy7");
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Analytics />
     </QueryClientProvider>
