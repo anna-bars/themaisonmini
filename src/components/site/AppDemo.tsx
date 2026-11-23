@@ -52,8 +52,9 @@ export function AppDemo() {
                 <span className="text-2xl text-ink"> / ${DEMO_BUDGET}</span>
               </span>
               <span className="pb-1 text-xs text-muted-foreground">
-                ${DEMO_BUDGET - total} left to spend · <b className="text-ink">{marked}</b>/{demoPieces.length} pieces ·{" "}
-                <b className="text-ink">{ready}</b>/{demoLooks.length} looks ready
+                ${DEMO_BUDGET - total} left to spend · <b className="text-ink">{marked}</b>/
+                {demoPieces.length} pieces · <b className="text-ink">{ready}</b>/{demoLooks.length}{" "}
+                looks ready
               </span>
             </div>
             <div className="mt-3 h-3 border-2 border-ink bg-paper">
@@ -65,7 +66,8 @@ export function AppDemo() {
           </div>
 
           <p className="mb-3 text-xs text-muted-foreground">
-            <b className="text-ink">Tap once:</b> own it. <b className="text-ink">Twice:</b> will buy.
+            <b className="text-ink">Tap once:</b> own it. <b className="text-ink">Twice:</b> will
+            buy.
           </p>
 
           <div className="grid grid-cols-4 gap-2 sm:gap-3">
@@ -81,7 +83,12 @@ export function AppDemo() {
                     s === "buy" ? "shadow-offset -translate-x-0.5 -translate-y-0.5" : ""
                   } ${s === "own" ? "-rotate-1" : ""}`}
                 >
-                  <img src={p.img} alt="" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+                  <img
+                    src={p.img}
+                    alt=""
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover"
+                  />
                   {s && (
                     <span
                       className={`label-caps absolute left-1 top-1 px-1 py-0.5 text-[0.5rem] sm:left-1.5 sm:top-1.5 sm:px-1.5 sm:text-[0.68rem] ${
@@ -92,8 +99,12 @@ export function AppDemo() {
                     </span>
                   )}
                   <span className="flex flex-col gap-0 border-t-2 border-ink px-1.5 py-1 sm:flex-row sm:items-center sm:justify-between sm:gap-1 sm:px-2 sm:py-1.5">
-                    <span className="truncate text-[0.6rem] font-semibold sm:text-xs">{p.name}</span>
-                    <span className="font-display text-sm text-primary sm:text-lg">{s === "own" ? "$0" : `$${p.price}`}</span>
+                    <span className="truncate text-[0.6rem] font-semibold sm:text-xs">
+                      {p.name}
+                    </span>
+                    <span className="font-display text-sm text-primary sm:text-lg">
+                      {s === "own" ? "$0" : `$${p.price}`}
+                    </span>
                   </span>
                 </button>
               );
@@ -117,7 +128,10 @@ export function AppDemo() {
               const done = missing === 0;
               const blur = (missing / look.pieceIds.length) * 9;
               return (
-                <div key={look.id} className={`border-2 border-ink bg-card ${done ? "shadow-offset" : ""}`}>
+                <div
+                  key={look.id}
+                  className={`border-2 border-ink bg-card ${done ? "shadow-offset" : ""}`}
+                >
                   <div className="relative overflow-hidden">
                     <img
                       src={look.img}
@@ -152,7 +166,13 @@ export function AppDemo() {
             </p>
             {guide && (
               <div className="mt-3">
-                <BuyButton slug={guide.slug} itemName={guide.title} price={guide.price} label="Get the full app" variant="red" />
+                <BuyButton
+                  slug={guide.slug}
+                  itemName={guide.title}
+                  price={guide.price}
+                  label="Get the full app"
+                  variant="red"
+                />
               </div>
             )}
           </div>

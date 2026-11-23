@@ -71,7 +71,12 @@
   --input: var(--ink);
   --ring: oklch(0.6 0.215 28);
 
-  --gradient-sky: linear-gradient(180deg, var(--sky-deep) 0%, var(--sky) 38%, oklch(0.95 0.02 220) 100%);
+  --gradient-sky: linear-gradient(
+    180deg,
+    var(--sky-deep) 0%,
+    var(--sky) 38%,
+    oklch(0.95 0.02 220) 100%
+  );
   --shadow-frame: 0 30px 80px -30px oklch(0.3 0.08 240 / 0.45);
   --shadow-offset: 6px 6px 0 var(--primary);
 }
@@ -127,16 +132,25 @@
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 @utility animate-marquee {
   animation: marquee 32s linear infinite;
 }
 
 @keyframes leap {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
 }
 @utility animate-leap {
   animation: leap 5s ease-in-out infinite;

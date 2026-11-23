@@ -9,20 +9,56 @@ import look2 from "@/assets/looks/cozy-day.jpg";
 export type PieceStatus = "" | "own" | "buy";
 
 export type DemoPiece = { id: string; name: string; price: number; note: string; img: string };
-export type DemoLook = { id: string; name: string; number: string; pieceIds: string[]; img: string };
+export type DemoLook = {
+  id: string;
+  name: string;
+  number: string;
+  pieceIds: string[];
+  img: string;
+};
 
 export const DEMO_BUDGET = 100;
 
 export const demoPieces: DemoPiece[] = [
-  { id: "striped-knit", name: "Striped knit", price: 6, note: "Adds interest to neutrals", img: stripedKnit },
-  { id: "knit-sweater", name: "Knit sweater", price: 10, note: "Warmth and a polished look", img: knitSweater },
-  { id: "dark-jeans", name: "Dark jeans", price: 14, note: "The everyday foundation", img: darkJeans },
+  {
+    id: "striped-knit",
+    name: "Striped knit",
+    price: 6,
+    note: "Adds interest to neutrals",
+    img: stripedKnit,
+  },
+  {
+    id: "knit-sweater",
+    name: "Knit sweater",
+    price: 10,
+    note: "Warmth and a polished look",
+    img: knitSweater,
+  },
+  {
+    id: "dark-jeans",
+    name: "Dark jeans",
+    price: 14,
+    note: "The everyday foundation",
+    img: darkJeans,
+  },
   { id: "scarf", name: "Scarf", price: 3, note: "Color, warmth, polish", img: scarfImg },
 ];
 
 export const demoLooks: DemoLook[] = [
-  { id: "striped-easy", name: "Striped and easy", number: "01", pieceIds: ["striped-knit", "dark-jeans"], img: look1 },
-  { id: "cozy-day", name: "Cozy day", number: "02", pieceIds: ["knit-sweater", "dark-jeans", "scarf"], img: look2 },
+  {
+    id: "striped-easy",
+    name: "Striped and easy",
+    number: "01",
+    pieceIds: ["striped-knit", "dark-jeans"],
+    img: look1,
+  },
+  {
+    id: "cozy-day",
+    name: "Cozy day",
+    number: "02",
+    pieceIds: ["knit-sweater", "dark-jeans", "scarf"],
+    img: look2,
+  },
 ];
 
 export type DemoState = Record<string, PieceStatus>;

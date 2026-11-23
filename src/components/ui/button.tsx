@@ -18,7 +18,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         ink: "rounded-full border-2 border-ink bg-ink text-paper label-caps hover:bg-primary hover:border-primary",
         red: "rounded-full border-2 border-primary bg-primary text-primary-foreground label-caps hover:bg-ink hover:border-ink",
-        paper: "rounded-full border-2 border-ink bg-paper text-ink label-caps hover:bg-ink hover:text-paper",
+        paper:
+          "rounded-full border-2 border-ink bg-paper text-ink label-caps hover:bg-ink hover:text-paper",
       },
       size: {
         default: "h-9 px-4 py-2",

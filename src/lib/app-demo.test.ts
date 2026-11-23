@@ -16,6 +16,8 @@ describe("try-it app preview", () => {
     const cozy = demoLooks.find((l) => l.id === "cozy-day");
     if (!cozy) throw new Error("missing look");
     expect(isLookReady({ "knit-sweater": "own", "dark-jeans": "buy" }, cozy)).toBe(false);
-    expect(isLookReady({ "knit-sweater": "own", "dark-jeans": "buy", scarf: "own" }, cozy)).toBe(true);
+    expect(isLookReady({ "knit-sweater": "own", "dark-jeans": "buy", scarf: "own" }, cozy)).toBe(
+      true,
+    );
   });
 });

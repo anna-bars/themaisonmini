@@ -26,7 +26,9 @@ export function BundleCard({ bundle, featured = false }: { bundle: Bundle; featu
       </ul>
       <div className="mt-auto flex items-end gap-3">
         <span className="font-display text-5xl leading-none">{formatPrice(bundle.price)}</span>
-        <span className="pb-1 text-sm line-through opacity-70">{formatPrice(bundleListPrice(bundle))}</span>
+        <span className="pb-1 text-sm line-through opacity-70">
+          {formatPrice(bundleListPrice(bundle))}
+        </span>
       </div>
       <BuyButton
         slug={bundle.slug}
